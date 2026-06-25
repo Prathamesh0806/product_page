@@ -57,12 +57,12 @@ This directly fixes the bug found during live-site research: with separate
 (e.g. 4 bottles) through different combinations of tiles, each producing a
 *different price* for the same number of bottles. A single stepper makes
 quantity the only input, so there's exactly one price for any given
-quantity — no ambiguity, no hidden combinations.
+quantity no ambiguity, no hidden combinations.
 
 **Why a persistent tier ladder instead of just showing the current discount?**
 Showing only the active discount tells the customer what they're getting,
 but not what they're missing. The ladder shows all four tiers at once with
-a "YOU ARE HERE" flag, so the customer can see — before adding to cart —
+a "YOU ARE HERE" flag, so the customer can see before adding to cart —
 exactly how many more bottles would unlock the next discount level. This
 turns the pricing table into a visible incentive rather than a static label.
 
@@ -71,13 +71,13 @@ of creating a duplicate?**
 This is a direct fix for the "mixing tiles" inconsistency. If a customer
 adds 2 bottles of 500mg, then comes back and adds 2 more, the cart
 correctly merges this into one line of 4 bottles at the 4-5 tier rate (18%
-off) — rather than two separate lines at the 2-3 tier rate (10% off) each,
+off) rather than two separate lines at the 2-3 tier rate (10% off) each,
 which would silently overcharge them relative to what the tier ladder
 promised.
 
 **Why is the pricing logic written as pure functions (`getTierForQty`,
 `calculatePricing`)?**
-These functions take plain data in and return plain data out — no DOM
+These functions take plain data in and return plain data out no DOM
 access inside them. This was verified independently with a standalone
 Node.js script before wiring them into the UI (all 24 combinations across
 3 sizes × 8 quantities were checked for correct math). Keeping pricing
@@ -113,7 +113,7 @@ This was deliberately built so the swap to production is small:
 3. Replace the local `state.cart` array with real Shopify cart API calls
    (`/cart/add.js`, `/cart/change.js`) so the cart drawer reflects the
    actual Shopify cart object instead of local state.
-4. Everything else the tier ladder UI, live summary, stepper — can stay
+4. Everything else the tier ladder UI, live summary, stepper can stay
    as-is, since it only depends on a `(sizeKey, qty) → pricing` function
    shape, regardless of where that data ultimately comes from.
 
