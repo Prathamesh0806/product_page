@@ -85,18 +85,17 @@ logic separate from rendering means it could be swapped for a real backend
 call (e.g. a Shopify Function or Storefront API price calculation) without
 touching any UI code — only the `PRODUCTS` data object and the calculation
 functions would need to change.
----
 
 ## 4. Known simplifications (intentional, for a demo scope)
 
 - **Dummy pricing data**, not pulled from a live Storefront API — per the
   brief's explicit allowance ("dummy/mock data is fine").
-- **No real checkout** — the Checkout button shows a toast confirming this
+- **No real checkout** the Checkout button shows a toast confirming this
   is a demo, since the brief doesn't require payment integration.
-- **No persistence** — cart state resets on page reload (no
+- **No persistence** cart state resets on page reload (no
   localStorage/sessionStorage used, since those aren't reliable in all
   embedded/sandboxed environments; state lives in memory for the session).
-- **Single product family** — only NMN is modeled, since that's the
+- **Single product family** only NMN is modeled, since that's the
   product the task is scoped around.
 
 ---
