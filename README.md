@@ -1,4 +1,4 @@
-# PDP Quantity-Discount Demo — README
+# PDP Quantity-Discount Demo
 
 **Part B deliverable** for the Decode Age PDP Volume Discount task.
 A working, self-contained demo of the redesign proposed in Part A.
@@ -43,7 +43,6 @@ engine**.
 | Live savings + total | Green summary box, updates on every quantity/size change |
 | Add to Cart | Adds the current size+quantity+price to the cart drawer |
 | Cart drawer | Slide-in panel, per-line breakdown, grand total, total saved |
-| Mobile layout | Capped at 480px max-width, additional tightening under 380px |
 
 ---
 
