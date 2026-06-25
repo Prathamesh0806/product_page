@@ -3,8 +3,6 @@
 **Part B deliverable** for the Decode Age PDP Volume Discount task.
 A working, self-contained demo of the redesign proposed in Part A.
 
----
-
 ## 1. How to run this
 
 This is a **HTML file and Style.CSS file** with no dependencies, no build step, and no
